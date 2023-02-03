@@ -13,7 +13,12 @@ fun main() {
         }
         return astst
     }
+    try{
     for (i in 1..x){
         println(addasterisk(i,spasterisk(x)))
+    }
+    } 
+    catch(e: Exception){
+        println("Incorrect input type")
     }
 }
