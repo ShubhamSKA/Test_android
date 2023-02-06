@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TipCalculator"
+        android:height="60dp"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:background="@color/purple_500"
+        android:textColor="#ffffff"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/Price_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+
+        android:layout_marginBottom="440dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="30sp"
+        android:TextColor="#132500"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <EditText
+        android:id="@+id/Price_demand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the price"
+        android:textColor="#C0C0C0"
+        android:layout_marginStart="20dp"
+        android:paddingEnd="80dp"
+        app:layout_constraintBottom_toBottomOf="@id/Price_label"
+        app:layout_constraintLeft_toRightOf="@id/Price_label"
+        />
+    <TextView
+        android:id="@+id/Tip_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/Price_label"
+        app:layout_constraintRight_toRightOf="@id/Price_label"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/Tip_label"
+        app:layout_constraintLeft_toLeftOf="@id/Price_demand"
+
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:text=" 10% "
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 18% "
+            android:minWidth="0dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 25% "
+            android:minWidth="0dp"
+            />
+    </LinearLayout>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the tipping percentage"
+        android:textColor="#C0C0C0"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/Price_demand"
+        app:layout_constraintTop_toBottomOf="@id/Tip_label"
+        />
+    <TextView
+        android:id="@+id/tip_tot_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Tip Amount"
+        android:textSize="30sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:textSize="50sp"
+        app:layout_constraintTop_toBottomOf="@id/tip_tot_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULATE"
+        android:minWidth="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="50dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
