@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tipcalc_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TipCalculator"
@@ -34,12 +35,13 @@
             android:layout_height="wrap_content"
             android:text="Price"
             android:textSize="30sp"
-            android:TextColor="#132500"/>
+            />
         <EditText
             android:id="@+id/Price_demand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter the price"
+            android:hint="Enter the price"
+            android:inputType="numberDecimal"
             android:textColor="#C0C0C0"
             android:layout_marginStart="20dp"
             android:paddingEnd="100dp"
@@ -64,18 +66,21 @@
 
             />
         <Button
+            android:id="@+id/tip10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="0dp"
             android:text="10%"
             />
         <Button
+            android:id="@+id/tip18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="18%"
             android:minWidth="0dp"
             />
         <Button
+            android:id="@+id/tip25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="25%"
@@ -83,9 +88,11 @@
             />
     </LinearLayout>
     <EditText
+        android:id="@+id/personalized_tip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter the tipping percentage"
+        android:hint="Enter the tipping percentage"
+        android:inputType="numberDecimal"
         android:textColor="#C0C0C0"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="90dp"
@@ -104,6 +111,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         />
     <TextView
+        android:id="@+id/tipamount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$0.00"
@@ -113,6 +121,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         />
     <Button
+        android:id="@+id/calc_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CALCULATE"
